@@ -1,0 +1,16 @@
+raum,wochentag,stunde,klasse,fach
+IN1,Montag,1,10a,Informatik
+IN1,Montag,2,10a,Informatik
+IN1,Dienstag,3,11b,Informatik
+IN1,Dienstag,4,11b,Informatik
+IN1,Mittwoch,5,9c,Informatik
+IN1,Donnerstag,3,11b,Informatik
+IN1,Freitag,1,10a,Informatik
+IN2,Dienstag,4,10a,Informatik
+IN2,Mittwoch,1,8b,Informatik
+IN2,Donnerstag,2,7a,Informatik
+PH1,Montag,6,10a,Physik
+PH1,Mittwoch,2,9c,Physik
+PH2,Donnerstag,4,11b,Physik
+104,Montag,3,7a,Mathematik
+104,Mittwoch,4,7a,Englisch

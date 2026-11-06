@@ -1,0 +1,7 @@
+# Eigene Konfiguration mit API-Schlüssel – nie hochladen
+.env
+.venv/
+__pycache__/
+node_modules/
+target/
+*.class

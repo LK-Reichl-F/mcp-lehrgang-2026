@@ -1,0 +1,16 @@
+{
+  "7a": {
+    "Montag": ["Deutsch", "Deutsch", "Mathematik", "Englisch", "Biologie", "Sport"],
+    "Dienstag": ["Deutsch", "Englisch", "Mathematik", "Geschichte", "Kunst", "Kunst"],
+    "Mittwoch": ["Mathematik", "Latein", "Englisch", "Englisch", "Erdkunde"],
+    "Donnerstag": ["Latein", "Informatik", "Deutsch", "Musik", "Sport", "Sport"],
+    "Freitag": ["Englisch", "Mathematik", "Latein", "Erdkunde", "Religion"]
+  },
+  "10a": {
+    "Montag": ["Informatik", "Informatik", "Deutsch", "Mathematik", "Englisch", "Physik"],
+    "Dienstag": ["Chemie", "Mathematik", "Englisch", "Informatik", "Deutsch", "Sport"],
+    "Mittwoch": ["Physik", "Deutsch", "Geschichte", "Mathematik", "Wirtschaft"],
+    "Donnerstag": ["Englisch", "Chemie", "Religion", "Mathematik", "Deutsch", "Kunst"],
+    "Freitag": ["Informatik", "Physik", "Englisch", "Sozialkunde", "Deutsch"]
+  }
+}

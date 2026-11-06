@@ -1,0 +1,4 @@
+# Build-Ergebnisse und Abhängigkeiten (werden mit npm install bzw. cargo build neu erzeugt)
+node_modules/
+target/
+*.class

@@ -1,0 +1,37 @@
+# Lab 03: JSON-RPC-Nachrichten zum Kopieren
+# Server starten (im Ordner code/python):   uv run lab03/mini_server.py
+# Dann jeweils EINE Zeile (ohne #) kopieren, im Terminal einfügen und Enter drücken. Beenden: Strg+C
+
+# ===== Teil A: Spezifikation 2026-07-28 (zustandslos, jede Anfrage trägt _meta) =====
+
+# A1 Was kann der Server?
+{"jsonrpc":"2.0","id":1,"method":"server/discover","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{},"io.modelcontextprotocol/clientInfo":{"name":"von-hand","version":"1.0"}}}}
+
+# A2 Welche Tools gibt es?
+{"jsonrpc":"2.0","id":2,"method":"tools/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{}}}}
+
+# A3 Ein Tool aufrufen
+{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"addiere","arguments":{"a":2,"b":3},"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{}}}}
+
+# A4 Welche Resources gibt es? – und eine lesen
+{"jsonrpc":"2.0","id":4,"method":"resources/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{}}}}
+{"jsonrpc":"2.0","id":5,"method":"resources/read","params":{"uri":"schule://hausordnung","_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{}}}}
+
+# A5 Welche Prompts gibt es? – und einen ausfüllen
+{"jsonrpc":"2.0","id":6,"method":"prompts/list","params":{"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{}}}}
+{"jsonrpc":"2.0","id":7,"method":"prompts/get","params":{"name":"elternbrief","arguments":{"anlass":"Wandertag"},"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{}}}}
+
+# A6 Fehler provozieren: falscher Typ, unbekanntes Tool, fehlendes _meta
+{"jsonrpc":"2.0","id":8,"method":"tools/call","params":{"name":"addiere","arguments":{"a":"zwei","b":3},"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{}}}}
+{"jsonrpc":"2.0","id":9,"method":"tools/call","params":{"name":"gibtsnicht","arguments":{},"_meta":{"io.modelcontextprotocol/protocolVersion":"2026-07-28","io.modelcontextprotocol/clientCapabilities":{}}}}
+{"jsonrpc":"2.0","id":10,"method":"tools/list"}
+
+# ===== Teil B: Spezifikation 2025-11-25 (mit Handshake) – Server neu starten! =====
+
+# B1 Handshake: initialize ...
+{"jsonrpc":"2.0","id":1,"method":"initialize","params":{"protocolVersion":"2025-11-25","capabilities":{},"clientInfo":{"name":"von-hand","version":"1.0"}}}
+# B2 ... und die Benachrichtigung "initialized" (ohne id – darauf gibt es keine Antwort)
+{"jsonrpc":"2.0","method":"notifications/initialized"}
+# B3 Danach ohne _meta
+{"jsonrpc":"2.0","id":2,"method":"tools/list"}
+{"jsonrpc":"2.0","id":3,"method":"tools/call","params":{"name":"wuerfle","arguments":{"seiten":20}}}

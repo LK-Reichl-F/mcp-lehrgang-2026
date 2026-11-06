@@ -1,0 +1,9 @@
+[
+  {"datum": "2026-11-10", "uhrzeit": "19:00", "titel": "Elternbeiratssitzung", "ort": "Bibliothek", "zielgruppe": "Elternbeirat"},
+  {"datum": "2026-11-12", "uhrzeit": "15:00", "titel": "Fachsitzung Informatik", "ort": "IN1", "zielgruppe": "Lehrkräfte Informatik"},
+  {"datum": "2026-11-17", "uhrzeit": "08:00", "titel": "Schulaufgabe Mathematik 9c", "ort": "109", "zielgruppe": "9c"},
+  {"datum": "2026-11-19", "uhrzeit": "16:00", "titel": "Elternsprechabend", "ort": "Aula", "zielgruppe": "Eltern"},
+  {"datum": "2026-11-25", "uhrzeit": "14:00", "titel": "Informatik-Wettbewerb Biber (Anmeldeschluss)", "ort": "Sekretariat", "zielgruppe": "alle Klassen"},
+  {"datum": "2026-12-04", "uhrzeit": "18:00", "titel": "Adventskonzert", "ort": "Aula", "zielgruppe": "Schulfamilie"},
+  {"datum": "2026-12-23", "uhrzeit": "11:15", "titel": "Unterrichtsende vor den Weihnachtsferien", "ort": "", "zielgruppe": "alle"}
+]

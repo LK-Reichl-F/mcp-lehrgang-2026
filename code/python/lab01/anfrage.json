@@ -1,0 +1,8 @@
+{
+  "model": "qwen3.5:4b",
+  "reasoning_effort": "none",
+  "messages": [
+    {"role": "system", "content": "Du antwortest kurz und auf Deutsch."},
+    {"role": "user", "content": "Nenne die Hauptstadt von Bayern."}
+  ]
+}
